@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch — Recomendador Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="app">
+    <header class="top">
+      <div class="brand"><span class="logo">CM</span><div><b>CineMatch</b><small>Recomendação inteligente</small></div></div>
+      <div class="status"><span></span> dados em tempo real</div>
+    </header>
+
+    <section id="quiz" class="panel hero">
+      <div class="eyebrow">PERFIL DE CINEMA</div>
+      <h1>Descubra filmes que combinam com você.</h1>
+      <p>Responda algumas perguntas. O sistema monta seu perfil e procura recomendações automaticamente.</p>
+
+      <div class="progress"><i id="bar"></i></div>
+      <div class="qmeta"><span id="qcount"></span><span id="qstep"></span></div>
+      <div id="question"></div>
+      <button id="next" class="primary" disabled>Continuar</button>
+    </section>
+
+    <section id="loading" class="panel loading hidden">
+      <div class="spinner"></div>
+      <h2>Analisando seu perfil...</h2>
+      <p>Consultando filmes e executando os modelos de recomendação.</p>
+    </section>
+
+    <section id="results" class="hidden">
+      <div class="result-head">
+        <div>
+          <div class="eyebrow">SEU PERFIL</div>
+          <h2 id="profileName"></h2>
+          <p id="profileText"></p>
+        </div>
+        <button id="again" class="ghost">Refazer quiz</button>
+      </div>
+
+      <div id="chips" class="chips"></div>
+
+      <div class="section-title">
+        <div><span>RECOMENDAÇÕES</span><h2>Filmes para você</h2></div>
+        <small id="source"></small>
+      </div>
+      <div id="movies" class="movies"></div>
+      <div id="error" class="error hidden"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
